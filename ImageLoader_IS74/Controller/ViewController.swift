@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             guard let downloadImages = data else { return }
             self?.images = downloadImages
             DispatchQueue.main.async {
-                self?.dataSnapshot(items: downloadImages)
+                self?.dataSnapshot()
             }
             
         }
@@ -64,12 +64,13 @@ class ViewController: UIViewController {
             }
         })
     }
-    private func dataSnapshot(items: [MyImage]){
+    private func dataSnapshot(){
         var snapshot = NSDiffableDataSourceSnapshot<Section,MyImage>()
         snapshot.appendSections([.imageGallery])
-        snapshot.appendItems(items, toSection: .imageGallery)
+        snapshot.appendItems(images, toSection: .imageGallery)
         dataSourse?.apply(snapshot, animatingDifferences: true)
     }
+    
     private func reloadSnap(for items: [MyImage]){
         guard var snap = dataSourse?.snapshot() else { return }
         snap.deleteAllItems()
@@ -81,10 +82,11 @@ class ViewController: UIViewController {
     private func configureCollectionView(){
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = .white
         
         view.addSubview(collectionView)
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseID)
+        collectionView.delegate = self
     }
     
     private func createCompositionLayout() -> UICollectionViewLayout {
@@ -109,3 +111,10 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let image = self.dataSourse?.itemIdentifier(for: indexPath) else { return }
+        let detailViewController = DetailViewController(with: image)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}

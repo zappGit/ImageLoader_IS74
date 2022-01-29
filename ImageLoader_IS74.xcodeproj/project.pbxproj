@@ -17,6 +17,8 @@
 		B8052CA227A2CB6700585130 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052CA127A2CB6700585130 /* Section.swift */; };
 		B8052CA427A2DAF600585130 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052CA327A2DAF600585130 /* NetworkManager.swift */; };
 		B8052CA627A42BE900585130 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052CA527A42BE900585130 /* Model.swift */; };
+		B8052CAD27A597B000585130 /* DetailViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052CAC27A597B000585130 /* DetailViewController.swift.swift */; };
+		B8052CAF27A59A8300585130 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052CAE27A59A8300585130 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B8052CA127A2CB6700585130 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		B8052CA327A2DAF600585130 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B8052CA527A42BE900585130 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B8052CAC27A597B000585130 /* DetailViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift.swift; sourceTree = "<group>"; };
+		B8052CAE27A59A8300585130 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +70,59 @@
 			children = (
 				B8052C8927A2BFCD00585130 /* AppDelegate.swift */,
 				B8052C8B27A2BFCD00585130 /* SceneDelegate.swift */,
-				B8052C8D27A2BFCD00585130 /* ViewController.swift */,
-				B8052CA527A42BE900585130 /* Model.swift */,
-				B8052CA127A2CB6700585130 /* Section.swift */,
-				B8052C9D27A2C6E800585130 /* ImageCell.swift */,
-				B8052CA327A2DAF600585130 /* NetworkManager.swift */,
-				B8052C9F27A2C86000585130 /* WebImageView.swift */,
+				B8052CA727A596C900585130 /* Controller */,
+				B8052CAA27A5975900585130 /* Model */,
+				B8052CAB27A5976100585130 /* Manager */,
+				B8052CA927A5974800585130 /* Helpers */,
 				B8052C9227A2BFCF00585130 /* Assets.xcassets */,
 				B8052C9427A2BFCF00585130 /* LaunchScreen.storyboard */,
 				B8052C9727A2BFCF00585130 /* Info.plist */,
 			);
 			path = ImageLoader_IS74;
+			sourceTree = "<group>";
+		};
+		B8052CA727A596C900585130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8052C8D27A2BFCD00585130 /* ViewController.swift */,
+				B8052CAC27A597B000585130 /* DetailViewController.swift.swift */,
+				B8052CA827A5970900585130 /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8052CA827A5970900585130 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B8052C9D27A2C6E800585130 /* ImageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B8052CA927A5974800585130 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B8052C9F27A2C86000585130 /* WebImageView.swift */,
+				B8052CAE27A59A8300585130 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B8052CAA27A5975900585130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8052CA527A42BE900585130 /* Model.swift */,
+				B8052CA127A2CB6700585130 /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8052CAB27A5976100585130 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B8052CA327A2DAF600585130 /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +200,10 @@
 				B8052C8A27A2BFCD00585130 /* AppDelegate.swift in Sources */,
 				B8052CA227A2CB6700585130 /* Section.swift in Sources */,
 				B8052CA027A2C86000585130 /* WebImageView.swift in Sources */,
+				B8052CAF27A59A8300585130 /* Constants.swift in Sources */,
 				B8052CA427A2DAF600585130 /* NetworkManager.swift in Sources */,
 				B8052C8C27A2BFCD00585130 /* SceneDelegate.swift in Sources */,
+				B8052CAD27A597B000585130 /* DetailViewController.swift.swift in Sources */,
 				B8052CA627A42BE900585130 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
