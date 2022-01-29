@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     let label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.textColor = .black
         return label
     }()
@@ -72,7 +73,7 @@ extension DetailViewController {
             label.topAnchor.constraint(equalTo: fullImage.bottomAnchor,constant: 20),
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            label.heightAnchor.constraint(equalToConstant: 20)
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
