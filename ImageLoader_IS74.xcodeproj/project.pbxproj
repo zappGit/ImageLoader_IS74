@@ -102,8 +102,8 @@
 		B8052CA927A5974800585130 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B8052C9F27A2C86000585130 /* WebImageView.swift */,
 				B8052CAE27A59A8300585130 /* Constants.swift */,
+				B8052C9F27A2C86000585130 /* WebImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -348,8 +348,10 @@
 				DEVELOPMENT_TEAM = 3SJ4Y68PW7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageLoader_IS74/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Пожалуйста, разрешите доступ к галерее для сохранеия файлов";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,7 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,8 +377,10 @@
 				DEVELOPMENT_TEAM = 3SJ4Y68PW7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageLoader_IS74/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Пожалуйста, разрешите доступ к галерее для сохранеия файлов";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -388,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

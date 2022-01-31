@@ -6,22 +6,14 @@
 //
 
 import Foundation
-
-struct MyImage: Hashable, Codable, Equatable {
-    
+//MARK: Model for API
+struct MyImage: Hashable, Codable {
     var albumId: Int
     var id: Int
     var title: String
     var url: String
     var thumbnailUrl: String
-    
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
     }
-    static func == (lhs: MyImage, rhs: MyImage) -> Bool {
-        return lhs.id == rhs.id && lhs.albumId == rhs.albumId && lhs.title == rhs.title && lhs.url == rhs.url && lhs.thumbnailUrl == rhs.thumbnailUrl
-    }
-}
-typealias Images = [MyImage]
+
+
 

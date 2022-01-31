@@ -13,30 +13,25 @@ protocol ConfiguringCell {
 }
 
 class ImageCell: UICollectionViewCell, ConfiguringCell {
-    
     static let reuseID = "imageCell"
     let cellImage = WebImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.cornerRadius = 15
         setupConstraints()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //MARK: Set image in UIImageView
     func configureCell(with value: MyImage) {
         cellImage.set(imgUrl: value.thumbnailUrl)
-       
     }
 }
-
+//MARK: Make constraints
 extension ImageCell {
     private func setupConstraints(){
         cellImage.translatesAutoresizingMaskIntoConstraints = false
-        cellImage.adjustsImageSizeForAccessibilityContentSizeCategory = true
         contentView.addSubview(cellImage)
         
         NSLayoutConstraint.activate([
